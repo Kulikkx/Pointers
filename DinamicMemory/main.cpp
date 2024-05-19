@@ -1,4 +1,4 @@
-//DynamicMemory
+п»ї//DynamicMemory
 #include<iostream>
 using namespace std;
 using std::cin;
@@ -19,7 +19,7 @@ int* pop_back(int arr[], int& n);
 int* pop_front(int arr[], int& n);
 int* insert(int arr[], int& n, int index, int value);
 int* erase(int arr[], int& n, int index);
-//Stack - это модель памяти, из которой последний записанный элемент считывается первым
+//Stack - СЌС‚Рѕ РјРѕРґРµР»СЊ РїР°РјСЏС‚Рё, РёР· РєРѕС‚РѕСЂРѕР№ РїРѕСЃР»РµРґРЅРёР№ Р·Р°РїРёСЃР°РЅРЅС‹Р№ СЌР»РµРјРµРЅС‚ СЃС‡РёС‚С‹РІР°РµС‚СЃСЏ РїРµСЂРІС‹Рј
 
 int** Allocate(const int ROWS, const int COLS);
 int** Push_row_back(int** arr, int& ROWS, const int COLS);
@@ -46,7 +46,7 @@ void main()
 	setlocale(LC_ALL, "");
 #ifdef DYNAMIC_MEMORY_1
 	int n = 0;
-	cout << "Введите размер массива: "; cin >> n;
+	cout << "Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР°: "; cin >> n;
 	int* arr = new int[n];
 
 	FillRand(arr, n);
@@ -54,32 +54,32 @@ void main()
 
 	int value;
 	int index;
-	cout << "Введите добавляемое значение в конец массива: "; cin >> value;
+	cout << "Р’РІРµРґРёС‚Рµ РґРѕР±Р°РІР»СЏРµРјРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РєРѕРЅРµС† РјР°СЃСЃРёРІР°: "; cin >> value;
 	arr = push_back(arr, n, value);
 	Print(arr, n);
-	cout << "Введите добавляемое значение в начало массива: "; cin >> value;
+	cout << "Р’РІРµРґРёС‚Рµ РґРѕР±Р°РІР»СЏРµРјРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РЅР°С‡Р°Р»Рѕ РјР°СЃСЃРёРІР°: "; cin >> value;
 	arr = push_front(arr, n, value);
 	Print(arr, n);
-	cout << "Удаление последнего элемента: " << endl;
+	cout << "РЈРґР°Р»РµРЅРёРµ РїРѕСЃР»РµРґРЅРµРіРѕ СЌР»РµРјРµРЅС‚Р°: " << endl;
 	arr = pop_back(arr, n);
 	Print(arr, n);
-	cout << "Удаление нулевого элемента: " << endl;
+	cout << "РЈРґР°Р»РµРЅРёРµ РЅСѓР»РµРІРѕРіРѕ СЌР»РµРјРµРЅС‚Р°: " << endl;
 	arr = pop_front(arr, n);
 	Print(arr, n);
 	do
 	{
-		cout << "Введите индекс элемента для замены от 0  до  " << n << endl; cin >> index;
-		if (index < 0 || index >= n)cout << "Такого индекса не существует" << endl;
+		cout << "Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ СЌР»РµРјРµРЅС‚Р° РґР»СЏ Р·Р°РјРµРЅС‹ РѕС‚ 0  РґРѕ  " << n << endl; cin >> index;
+		if (index < 0 || index >= n)cout << "РўР°РєРѕРіРѕ РёРЅРґРµРєСЃР° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚" << endl;
 
 	} while (index < 0 || index >= n);
 	cout << endl;
-	cout << "Введите добавляемое значение: "; cin >> value;
+	cout << "Р’РІРµРґРёС‚Рµ РґРѕР±Р°РІР»СЏРµРјРѕРµ Р·РЅР°С‡РµРЅРёРµ: "; cin >> value;
 	arr = insert(arr, n, index, value);
 	Print(arr, n);
 	do
 	{
-		cout << "Введите индекс элемента для удаления от 0  до  " << n << endl; cin >> index;
-		if (index < 0 || index >= n)cout << "Такого индекса не существует" << endl;
+		cout << "Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ СЌР»РµРјРµРЅС‚Р° РґР»СЏ СѓРґР°Р»РµРЅРёСЏ РѕС‚ 0  РґРѕ  " << n << endl; cin >> index;
+		if (index < 0 || index >= n)cout << "РўР°РєРѕРіРѕ РёРЅРґРµРєСЃР° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚" << endl;
 
 	} while (index < 0 || index >= n);
 	arr = erase(arr, n, index);
@@ -93,69 +93,69 @@ void main()
 #ifdef DYNAMIC_MEMORY_2
 	int ROWS;
 	int COLS;
-	cout << "Введите количество строк: "; cin >> ROWS;
-	cout << "Введите количество элементов строки: "; cin >> COLS;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє: "; cin >> ROWS;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ СЃС‚СЂРѕРєРё: "; cin >> COLS;
 
 	int** arr = Allocate(ROWS, COLS);
 
 	int index = 0;
 	FillRand(arr, ROWS, COLS);
 	Print(arr, ROWS, COLS);
-	cout << "добавление последней стороки в массив: " << endl;
+	cout << "РґРѕР±Р°РІР»РµРЅРёРµ РїРѕСЃР»РµРґРЅРµР№ СЃС‚РѕСЂРѕРєРё РІ РјР°СЃСЃРёРІ: " << endl;
 	arr = Push_row_back(arr, ROWS, COLS);
 	FillRand(arr[ROWS - 1], COLS, 100, 1000);
 	Print(arr, ROWS, COLS);
-	cout << "добавление нулевой стороки в массив: " << endl;
+	cout << "РґРѕР±Р°РІР»РµРЅРёРµ РЅСѓР»РµРІРѕР№ СЃС‚РѕСЂРѕРєРё РІ РјР°СЃСЃРёРІ: " << endl;
 	arr = Push_row_front(arr, ROWS, COLS);
 	FillRand(arr[0], COLS, 100, 1000);
 	Print(arr, ROWS, COLS);
 	do
 	{
-		cout << "Введите индекс строки для вставки строки от 0  до  " << ROWS << endl; cin >> index;
-		if (index < 0 || index > ROWS)cout << "Такого индекса не существует" << endl;
+		cout << "Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ СЃС‚СЂРѕРєРё РґР»СЏ РІСЃС‚Р°РІРєРё СЃС‚СЂРѕРєРё РѕС‚ 0  РґРѕ  " << ROWS << endl; cin >> index;
+		if (index < 0 || index > ROWS)cout << "РўР°РєРѕРіРѕ РёРЅРґРµРєСЃР° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚" << endl;
 
 	} while (index < 0 || index > ROWS);
 	arr = Insert_row(arr, ROWS, COLS, index);
 	FillRand(arr[index], COLS, 100, 1000);
 	Print(arr, ROWS, COLS);
-	cout << "Удаление последней строки в массиве: " << endl;
+	cout << "РЈРґР°Р»РµРЅРёРµ РїРѕСЃР»РµРґРЅРµР№ СЃС‚СЂРѕРєРё РІ РјР°СЃСЃРёРІРµ: " << endl;
 	arr = Pop_row_back(arr, ROWS, COLS);
 	Print(arr, ROWS, COLS);
-	cout << "Удаление нулевой строки в массиве: " << endl;
+	cout << "РЈРґР°Р»РµРЅРёРµ РЅСѓР»РµРІРѕР№ СЃС‚СЂРѕРєРё РІ РјР°СЃСЃРёРІРµ: " << endl;
 	arr = Pop_row_front(arr, ROWS, COLS);
 	Print(arr, ROWS, COLS);
 	do
 	{
-		cout << "Введите индекс строки для удаления от 0  до  " << ROWS << endl; cin >> index;
-		if (index < 0 || index > ROWS)cout << "Такого индекса не существует" << endl;
+		cout << "Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ СЃС‚СЂРѕРєРё РґР»СЏ СѓРґР°Р»РµРЅРёСЏ РѕС‚ 0  РґРѕ  " << ROWS << endl; cin >> index;
+		if (index < 0 || index > ROWS)cout << "РўР°РєРѕРіРѕ РёРЅРґРµРєСЃР° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚" << endl;
 
 	} while (index < 0 || index > ROWS);
 	arr = Erase_row(arr, ROWS, COLS, index);
 	Print(arr, ROWS, COLS);
-	cout << "добавление столбика в конец массива: " << endl;
+	cout << "РґРѕР±Р°РІР»РµРЅРёРµ СЃС‚РѕР»Р±РёРєР° РІ РєРѕРЅРµС† РјР°СЃСЃРёРІР°: " << endl;
 	Push_col_back(arr, ROWS, COLS);
 	Print(arr, ROWS, COLS);
-	cout << "добавление столбика в начало массива: " << endl;
+	cout << "РґРѕР±Р°РІР»РµРЅРёРµ СЃС‚РѕР»Р±РёРєР° РІ РЅР°С‡Р°Р»Рѕ РјР°СЃСЃРёРІР°: " << endl;
 	Push_col_front(arr, ROWS, COLS);
 	Print(arr, ROWS, COLS);
 	do
 	{
-		cout << "Введите индекс элемента столбца для добавлеия от 0  до  " << COLS << endl; cin >> index;
-		if (index < 0 || index > COLS)cout << "Такого индекса не существует" << endl;
+		cout << "Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ СЌР»РµРјРµРЅС‚Р° СЃС‚РѕР»Р±С†Р° РґР»СЏ РґРѕР±Р°РІР»РµРёСЏ РѕС‚ 0  РґРѕ  " << COLS << endl; cin >> index;
+		if (index < 0 || index > COLS)cout << "РўР°РєРѕРіРѕ РёРЅРґРµРєСЃР° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚" << endl;
 
 	} while (index < 0 || index > COLS);
 	Insert_col(arr, ROWS, COLS, index);
 	Print(arr, ROWS, COLS);
-	cout << "Удаление столбика в конце массива: " << endl;
+	cout << "РЈРґР°Р»РµРЅРёРµ СЃС‚РѕР»Р±РёРєР° РІ РєРѕРЅС†Рµ РјР°СЃСЃРёРІР°: " << endl;
 	Pop_col_back(arr, ROWS, COLS);
 	Print(arr, ROWS, COLS);
-	cout << "Удаление столбика в начале массива: " << endl;
+	cout << "РЈРґР°Р»РµРЅРёРµ СЃС‚РѕР»Р±РёРєР° РІ РЅР°С‡Р°Р»Рµ РјР°СЃСЃРёРІР°: " << endl;
 	Pop_col_front(arr, ROWS, COLS);
 	Print(arr, ROWS, COLS);
 	do
 	{
-		cout << "Введите индекс элемента столбца для удаления от 0  до  " << COLS << endl; cin >> index;
-		if (index < 0 || index > COLS)cout << "Такого индекса не существует" << endl;
+		cout << "Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ СЌР»РµРјРµРЅС‚Р° СЃС‚РѕР»Р±С†Р° РґР»СЏ СѓРґР°Р»РµРЅРёСЏ РѕС‚ 0  РґРѕ  " << COLS << endl; cin >> index;
+		if (index < 0 || index > COLS)cout << "РўР°РєРѕРіРѕ РёРЅРґРµРєСЃР° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚" << endl;
 
 	} while (index < 0 || index > COLS);
 	Erase_col(arr, ROWS, COLS, index);
@@ -166,8 +166,8 @@ void main()
 #ifdef PREFORMANCE_CHECK
 	int ROWS;
 	int COLS;
-	cout << "Введите количество строк: "; cin >> ROWS;
-	cout << "Введите количество элементов строки: "; cin >> COLS;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє: "; cin >> ROWS;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ СЃС‚СЂРѕРєРё: "; cin >> COLS;
 
 	int** arr = Allocate(ROWS, COLS);
 	cout << "Memory allocated" << endl;
@@ -202,11 +202,11 @@ void FillRand(int** arr, const int ROWS, const int COLS)
 		}
 	}
 }
-void Print(int arr[], const int n) //Вывод массивов на экран
+void Print(int arr[], const int n) //Р’С‹РІРѕРґ РјР°СЃСЃРёРІРѕРІ РЅР° СЌРєСЂР°РЅ
 {
 	for (int i = 0; i < n; i++)
 	{
-		//Обращение к элементам массива через опертор индексирования - []:
+		//РћР±СЂР°С‰РµРЅРёРµ Рє СЌР»РµРјРµРЅС‚Р°Рј РјР°СЃСЃРёРІР° С‡РµСЂРµР· РѕРїРµСЂС‚РѕСЂ РёРЅРґРµРєСЃРёСЂРѕРІР°РЅРёСЏ - []:
 		cout << arr[i] << tab;
 	}
 	cout << endl;
@@ -308,7 +308,7 @@ int* erase(int arr[], int& n, int index)
 int** Allocate(const int ROWS, const int COLS)
 {
 	int** arr = new int* [ROWS];
-	//2) Выделяем память под строки:
+	//2) Р’С‹РґРµР»СЏРµРј РїР°РјСЏС‚СЊ РїРѕРґ СЃС‚СЂРѕРєРё:
 	for (int i = 0; i < ROWS; i++)
 	{
 		arr[i] = new int[COLS];
@@ -317,24 +317,24 @@ int** Allocate(const int ROWS, const int COLS)
 }
 void Clear(int** arr, const int ROWS)
 {
-	//1) Cначала удаляем строки:
+	//1) CРЅР°С‡Р°Р»Р° СѓРґР°Р»СЏРµРј СЃС‚СЂРѕРєРё:
 	for (int i = 0; i < ROWS; i++)
 	{
 		delete[] arr[i];
 	}
-	//2) Удаляем массив указателей, обнуляем указатель и сбрасываем строки и элмен.строк.
+	//2) РЈРґР°Р»СЏРµРј РјР°СЃСЃРёРІ СѓРєР°Р·Р°С‚РµР»РµР№, РѕР±РЅСѓР»СЏРµРј СѓРєР°Р·Р°С‚РµР»СЊ Рё СЃР±СЂР°СЃС‹РІР°РµРј СЃС‚СЂРѕРєРё Рё СЌР»РјРµРЅ.СЃС‚СЂРѕРє.
 	delete[] arr;
 	arr = nullptr;
 	//ROWS = 0;
 	//COLS = 0;
-	cout << "Массив удалён, память отчищена!!!" << endl;
+	cout << "РњР°СЃСЃРёРІ СѓРґР°Р»С‘РЅ, РїР°РјСЏС‚СЊ РѕС‚С‡РёС‰РµРЅР°!!!" << endl;
 }
 int** Push_row_back(int** arr, int& ROWS, const int COLS)
 {
 	int** buffer = new int* [ROWS + 1];
 	for (int i = 0; i < ROWS; i++)buffer[i] = arr[i];
 	delete[] arr;
-	//4 созд строку и добавл ee в массив
+	//4 СЃРѕР·Рґ СЃС‚СЂРѕРєСѓ Рё РґРѕР±Р°РІР» ee РІ РјР°СЃСЃРёРІ
 	buffer[ROWS] = new int[COLS] {};
 	ROWS++;
 	return buffer;
@@ -361,9 +361,9 @@ int** Insert_row(int** arr, int& ROWS, const int COLS, int index)
 }
 int** Pop_row_back(int** arr, int& ROWS, const int COLS)
 {
-	int** buffer = new int* [--ROWS]; // переопеределяем массив указателей
+	int** buffer = new int* [--ROWS]; // РїРµСЂРµРѕРїРµСЂРµРґРµР»СЏРµРј РјР°СЃСЃРёРІ СѓРєР°Р·Р°С‚РµР»РµР№
 	for (int i = 0; i < ROWS; i++)buffer[i] = arr[i];
-	delete[] arr[ROWS]; // удаляем удаляемую строку из памяти 
+	delete[] arr[ROWS]; // СѓРґР°Р»СЏРµРј СѓРґР°Р»СЏРµРјСѓСЋ СЃС‚СЂРѕРєСѓ РёР· РїР°РјСЏС‚Рё 
 	delete[] arr;
 	return buffer;
 }
@@ -388,12 +388,12 @@ void Push_col_back(int** arr, const int ROWS, int& COLS)
 {
 	for (int i = 0; i < ROWS; i++)
 	{
-		int* buffer = new int[COLS + 1] {}; // Создание буферной строки
-		for (int j = 0; j < COLS; j++)buffer[j] = arr[i][j];  // копируем значения из исходной строки в буферную
-		delete[] arr[i]; // удаляем старую строку
-		arr[i] = buffer; // подменяем адрес строки в массиве указателей
+		int* buffer = new int[COLS + 1] {}; // РЎРѕР·РґР°РЅРёРµ Р±СѓС„РµСЂРЅРѕР№ СЃС‚СЂРѕРєРё
+		for (int j = 0; j < COLS; j++)buffer[j] = arr[i][j];  // РєРѕРїРёСЂСѓРµРј Р·РЅР°С‡РµРЅРёСЏ РёР· РёСЃС…РѕРґРЅРѕР№ СЃС‚СЂРѕРєРё РІ Р±СѓС„РµСЂРЅСѓСЋ
+		delete[] arr[i]; // СѓРґР°Р»СЏРµРј СЃС‚Р°СЂСѓСЋ СЃС‚СЂРѕРєСѓ
+		arr[i] = buffer; // РїРѕРґРјРµРЅСЏРµРј Р°РґСЂРµСЃ СЃС‚СЂРѕРєРё РІ РјР°СЃСЃРёРІРµ СѓРєР°Р·Р°С‚РµР»РµР№
 	}
-	COLS++; //добавляем столбец
+	COLS++; //РґРѕР±Р°РІР»СЏРµРј СЃС‚РѕР»Р±РµС†
 }
 
 void Push_col_front(int** arr, const int ROWS, int& COLS)
